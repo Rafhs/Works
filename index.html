@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles.css">
+	<title>Me namore!</title>
+</head>
+<body>
+<div id="conteudo">
+	<h2>Quer me namorar?</h2>
+	<button class="btn" onclick="sim()">SIM</button>
+	<button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+</div>
+
+<script>
+	function sim() {
+		alert("Parabéeeens, você fez uma ótima escolha Lari! Hahha");
+		location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+	}
+
+	function desvia(btn) {
+		btn.style.position = 'absolute';
+		btn.style.bottom = geraPosicao(10, 90);
+		btn.style.left = geraPosicao(10, 90);
+		console.log('opa, desviei...');
+	}
+
+	function geraPosicao(min, max) {
+		return (Math.random() * (max - min) + min) + "%";
+	}
+</script>
+
+</body>
+</html>
